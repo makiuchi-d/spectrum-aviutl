@@ -1,0 +1,73 @@
+//////////////////////////////////////////////////////////////////////
+// 	スペクトラムアナライザープラグイン		spectrum.rc
+//	Resource Script
+//////////////////////////////////////////////////////////////////////
+#include "resource.h"
+
+//////////////////////////////////////////////////////////////////////
+// Context Menu
+//
+CONTEXT MENU
+{
+	POPUP "context"
+	{
+		MENUITEM "&Monoral", IDC_MO
+		MENUITEM "&Stereo",  IDC_ST
+		MENUITEM "&Left",    IDC_L
+		MENUITEM "&Right",   IDC_R
+
+		MENUITEM SEPARATOR
+
+		POPUP "&FFT"
+		{
+			MENUITEM "256",  IDC_FFT256
+			MENUITEM "512",  IDC_FFT512
+			MENUITEM "1024", IDC_FFT1024
+			MENUITEM "2048", IDC_FFT2048
+			MENUITEM "4096", IDC_FFT4096
+		}
+
+		MENUITEM SEPARATOR
+
+		POPUP "&Color"
+		{
+			MENUITEM "&Monoral", IDC_COLOR_MO
+			MENUITEM "&Left",    IDC_COLOR_L
+			MENUITEM "&Right",   IDC_COLOR_R
+		}
+	}
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//  VERSION INFO
+//
+VS_VIRSION_INFO VERSIONINFO
+ FILEVERSION    0,0,1,0
+ PRODUCTVERSION 0,0,1
+ FILEFLAGSMASK  0x3FL
+ FILEFLAGS      0x0L
+ FILEOS         VOS__WINDOWS32
+ FILETYPE       VFT_DLL
+ FILESUBTYPE    0x0L
+{
+    BLOCK "StringFileInfo"
+	{
+        BLOCK "041103A4"
+		{
+            VALUE "FileDescription",  "スペクトラムアナライザー Plugin for AviUtl 0.98\0"
+            VALUE "FileVersion",      "0.0.1.0\0"
+            VALUE "InternalName",     "Spectrum Analyzer\0"
+            VALUE "LegalCopyright",   "(C) MakKi\0"
+            VALUE "OriginalFilename", "spectrum.aup\0"
+            VALUE "ProductName",      "スペクトラムアナライザー\0"
+            VALUE "ProductVersion",   "0.01\0"
+		}
+	}
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x411, 932
+    }
+}
+
+
